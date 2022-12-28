@@ -141,20 +141,36 @@ console.log(`conozco a tu ${fam4.parentesco} ${fam4.nombre}`);
 // mágicas para que el mensaje quede tal que así "Jose luis, te miro y te destruyo".
 
 const [reto1] = reto;
-// const [reto2] = reto1;
 
-
-for (const retito of reto1) {
-    for (const key in retito.sigueElReto) {
-        console.log(retito.sigueElReto[key].sigueElReto2);
+  for (const retito of reto1) {
+      for (const key in retito.sigueElReto) {
         
-    }
-}
+          const frase = [...retito.sigueElReto[key].sigueElReto2.sigueElReto3.pareceQueSabesBucearEntreObjetos.definitivamenteSabes];
+          
+          frase.splice(5,1);
+          frase.splice(7,1);
 
+          console.log(frase.join(" "));
+          
+      }
+      
+  };
 
+// Por último, como bonus, mostraremos por pantalla las urls de todas las imágenes de los poderes.
 
+const {nombre, description, imagenes} = poder1;
+const {nombre1, description1, imagenes1} = poder2;
+const {nombre2, description2, imagenes2} = poder3;
 
+for (const bonus of poderes) {
+  for (const key in bonus.imagenes) {
+    
+      const imagen = bonus.imagenes[key].imagen.url;
+      
+      console.log(imagen);
+      
+  }
+};
 
+// haremos la media de las edades de los familiares de elBoss.
 
-// console.log(reto1);
-// console.log(reto2);
