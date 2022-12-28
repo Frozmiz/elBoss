@@ -174,3 +174,27 @@ for (const bonus of poderes) {
 
 // haremos la media de las edades de los familiares de elBoss.
 
+const media = familiares.reduce(
+  (accumulator, familiar) => accumulator + familiar.edad,0
+);
+
+console.log(`El super innecesario dato de la media de edad de tus familiares es de ${media/familiares.length}`);
+
+// y mostraremos por pantalla el mensajeFinal.
+
+for (const retito of reto1) {
+  for (const key in retito.sigueElReto) {
+    
+      const frase = [...retito.sigueElReto[key].sigueElReto2.sigueElReto3.pareceQueSabesBucearEntreObjetos.definitivamenteSabes];
+      
+      console.log(frase[8].mensajeFinal);
+
+      // const fraseFinal = frase.filter((position) => {
+      //   return position.mensajeFinal;
+      // });
+
+      // console.log(fraseFinal[0]);
+      
+  }
+  
+};
